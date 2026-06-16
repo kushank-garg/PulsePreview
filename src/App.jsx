@@ -5,6 +5,7 @@ import MobilePreview from './components/preview/MobilePreview'
 import InitialFeedback from './components/content/InitialFeedback'
 import FeedbackPage from './components/content/FeedbackPage'
 import ThankYouPage from './components/content/ThankYouPage'
+import StylingPanel from './components/styling/StylingPanel'
 
 function App() {
   const [activeTab, setActiveTab] = useState('Content')
@@ -24,7 +25,7 @@ function App() {
             </div>
           )}
           {activeTab === 'Styling' && (
-            <p className="text-sm text-gray-400">Styling tab — coming soon</p>
+            <StylingPanel />
           )}
         </div>
       </div>
