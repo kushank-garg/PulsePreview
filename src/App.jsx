@@ -2,6 +2,9 @@ import { useState } from 'react'
 import Layout from './components/Layout'
 import TabBar from './components/TabBar'
 import MobilePreview from './components/preview/MobilePreview'
+import InitialFeedback from './components/content/InitialFeedback'
+import FeedbackPage from './components/content/FeedbackPage'
+import ThankYouPage from './components/content/ThankYouPage'
 
 function App() {
   const [activeTab, setActiveTab] = useState('Content')
@@ -14,7 +17,11 @@ function App() {
 
         <div className="flex-1 overflow-y-auto p-4">
           {activeTab === 'Content' && (
-            <p className="text-sm text-gray-400">Content tab — coming next</p>
+            <div>
+              <InitialFeedback />
+              <FeedbackPage />
+              <ThankYouPage />
+            </div>
           )}
           {activeTab === 'Styling' && (
             <p className="text-sm text-gray-400">Styling tab — coming soon</p>
