@@ -1,21 +1,17 @@
 const initialState = {
-  // content - initial feedback screen
   initTitle: 'How was your experience?',
   initSubtitle: 'We would love to hear from you!',
 
-  // content - feedback screen
-  ratingType: 'stars', // 'stars' or 'numbers'
+  ratingType: 'stars',
   options: ['Too complicated', 'Just right', 'Needs improvement'],
   showComment: true,
   submitText: 'Submit Feedback',
 
-  // content - thank you screen
   tyTitle: 'Thank you!',
   tySubtitle: 'Your feedback means a lot to us.',
   tyBtnText: 'Close',
-  tyMedia: null, // will store base64 image
+  tyMedia: null,
 
-  // styling
   bgColor: '#ffffff',
   titleColor: '#111827',
   subtitleColor: '#6b7280',
