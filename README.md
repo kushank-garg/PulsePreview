@@ -1,16 +1,25 @@
-# React + Vite
+# PulsePreview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple CSAT (Customer Satisfaction) campaign builder. Lets you configure a feedback popup's content and styling, with a live mobile preview that updates as you type — no save button, no refresh.
 
-Currently, two official plugins are available:
+Built this as part of a frontend intern assignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
 
-## React Compiler
+- Configure the three stages of a feedback popup: Initial screen, Feedback screen, Thank You screen
+- Switch between star ratings or 1-5 numbers
+- Add/remove quick-pick feedback options dynamically
+- Toggle a comment box on/off
+- Upload an image or GIF for the thank you screen
+- Customize every color (background, title, subtitle, button, rating states)
+- Control font size, font weight, border radius, button width/height
+- Optional glass/blur effect on the popup
+- See all of it update live in a mobile preview on the right, with star ratings and option selection you can actually click
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- React (Vite)
+- Tailwind CSS
+- Context API + useReducer for state management
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Folder structure
