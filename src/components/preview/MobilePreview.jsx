@@ -25,7 +25,7 @@ function MobilePreview() {
           <button
             key={s}
             onClick={() => setActiveScreen(s)}
-            className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
+            className={`px-3 py-1 rounded text-xs font-medium transition-all duration-200 active:scale-95 ${
               activeScreen === s ? 'bg-indigo-500 text-white' : 'text-gray-500 hover:text-gray-700'
             }`}
           >
@@ -34,7 +34,7 @@ function MobilePreview() {
         ))}
       </div>
 
-      <div className="relative bg-gray-900 rounded-[3rem] p-3 shadow-xl flex-shrink-0" style={{ width: 260, height: 520 }}>
+      <div className="relative bg-gray-900 rounded-[3rem] p-3 shadow-xl flex-shrink-0 animate-phone-in" style={{ width: 260, height: 520 }}>
         <div className="bg-gray-100 rounded-[2.5rem] h-full w-full overflow-hidden flex flex-col">
           <div className="bg-gray-900 flex justify-between items-center px-6 py-2 flex-shrink-0">
             <span className="text-white text-xs">9:41</span>
@@ -49,7 +49,8 @@ function MobilePreview() {
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-10" />
             <div
-              className={`relative w-full rounded-t-3xl overflow-hidden shadow-lg ${
+              key={activeScreen}
+              className={`relative w-full rounded-t-3xl overflow-hidden shadow-lg transition-colors duration-300 animate-screen-in ${
                 state.glassEffect ? 'backdrop-blur-md' : ''
               }`}
               style={

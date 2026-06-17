@@ -32,11 +32,11 @@ function OptionsList() {
       ))}
 
       <button
-        onClick={() => dispatch({ type: 'ADD_OPTION' })}
-        className="w-full border border-dashed border-gray-300 rounded-lg py-2 text-xs text-indigo-500 hover:bg-indigo-50 transition-colors mt-1"
-      >
-        + Add option
-      </button>
+  onClick={() => dispatch({ type: 'ADD_OPTION' })}
+  className="w-full border border-dashed border-gray-300 rounded-lg py-2 text-xs text-indigo-500 hover:bg-indigo-50 hover:border-indigo-300 transition-all duration-200 active:scale-95 mt-1"
+>
+  + Add option
+</button>
     </div>
   )
 }
