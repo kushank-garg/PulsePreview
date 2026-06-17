@@ -26,6 +26,7 @@ const initialState = {
   ratingUnselectedColor: '#d1d5db',
   glassEffect: false,
   darkMode: false,
+  previewDarkMode: false,
 }
 
 export default initialState
