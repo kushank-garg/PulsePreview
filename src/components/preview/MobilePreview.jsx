@@ -17,7 +17,7 @@ function MobilePreview() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-full bg-gray-100 p-4 overflow-auto">
+    <div className="flex flex-col items-center justify-center h-full bg-gray-100 dark:bg-gray-800 p-4 overflow-auto transition-colors duration-300">
       <p className="text-xs text-gray-400 mb-3 uppercase tracking-widest">Live Preview</p>
 
       <div className="flex gap-1 mb-4 bg-white rounded-lg p-1 border border-gray-200">
