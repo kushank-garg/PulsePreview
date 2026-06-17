@@ -23,3 +23,32 @@ Built this as part of a frontend intern assignment.
 - Context API + useReducer for state management
 
 ## Folder structure
+
+src/
+- components/
+  - content/ (Initial Feedback, Feedback Page, Thank You Page sections)
+  - styling/ (Styling panel)
+  - preview/ (Mobile preview + all 3 popup screens)
+  - ui/ (reusable inputs - InputField, ColorField, SliderField, Toggle, SectionLabel)
+  - Layout.jsx
+  - TabBar.jsx
+- context/
+  - CSATContext.jsx (global state + reducer)
+  - initialState.js
+- App.jsx
+- main.jsx
+
+## Setup
+
+```bash
+git clone https://github.com/kushank-garg/PulsePreview.git
+cd PulsePreview
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`
+
+## Deployment
+
+Live demo: https://pulse-preview-delta.vercel.app/
