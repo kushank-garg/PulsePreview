@@ -1,6 +1,6 @@
 import { useCSAT } from '../../context/CSATContext'
 
-function InitialScreen() {
+function InitialScreen({ goToFeedback }) {
   const { state } = useCSAT()
 
   return (
@@ -29,6 +29,7 @@ function InitialScreen() {
       </p>
 
       <button
+        onClick={goToFeedback}
         style={{
           backgroundColor: state.btnColor,
           color: state.btnTextColor,

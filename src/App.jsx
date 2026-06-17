@@ -12,7 +12,21 @@ function App() {
 
   return (
     <Layout>
-      <div className="w-96 flex flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 flex-shrink-0 transition-colors duration-300">
+      <div className="
+w-96
+flex
+flex-col
+bg-white/70
+dark:bg-gray-900/70
+backdrop-blur-xl
+border-r
+border-white/30
+dark:border-gray-700
+flex-shrink-0
+transition-colors
+duration-300
+shadow-[0_8px_40px_rgba(0,0,0,0.06)]
+">
         <TabBar activeTab={activeTab} onTabChange={setActiveTab} />
 
         <div className="flex-1 overflow-y-auto p-4">

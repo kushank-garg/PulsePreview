@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useCSAT } from '../../context/CSATContext'
 
-function FeedbackScreen() {
+function FeedbackScreen({ goToThankYou }) {
   const { state } = useCSAT()
   const [selectedRating, setSelectedRating] = useState(0)
   const [selectedOption, setSelectedOption] = useState(null)
@@ -98,6 +98,7 @@ function FeedbackScreen() {
       )}
 
       <button
+        onClick={goToThankYou}
         style={{
           backgroundColor: state.btnColor,
           color: state.btnTextColor,
