@@ -8,7 +8,7 @@ function FeedbackScreen() {
   const [comment, setComment] = useState('')
 
   return (
-    <div className="p-5" style={{ backgroundColor: state.bgColor }}>
+    <div className="p-5" style={{ backgroundColor: state.glassEffect ? 'transparent' : state.bgColor }}>
       <div className="w-10 h-1 bg-gray-300 rounded-full mx-auto mb-4" />
 
       <p
@@ -21,7 +21,6 @@ function FeedbackScreen() {
         {state.initSubtitle}
       </p>
 
-      {/* stars */}
       {state.ratingType === 'stars' ? (
         <div className="flex justify-center gap-1 mb-3">
           {[1, 2, 3, 4, 5].map(i => (
@@ -30,9 +29,7 @@ function FeedbackScreen() {
               onClick={() => setSelectedRating(i)}
               className="cursor-pointer transition-transform hover:scale-110"
               style={{
-                color: i <= selectedRating
-                  ? state.ratingSelectedColor
-                  : state.ratingUnselectedColor,
+                color: i <= selectedRating ? state.ratingSelectedColor : state.ratingUnselectedColor,
                 fontSize: state.fontSize + 8,
               }}
             >
@@ -41,7 +38,6 @@ function FeedbackScreen() {
           ))}
         </div>
       ) : (
-        /* numbers */
         <div className="flex justify-center gap-1 mb-3">
           {[1, 2, 3, 4, 5].map(i => (
             <div
@@ -51,9 +47,7 @@ function FeedbackScreen() {
               style={{
                 width: 28,
                 height: 28,
-                backgroundColor: i <= selectedRating
-                  ? state.ratingSelectedColor
-                  : state.ratingUnselectedColor,
+                backgroundColor: i <= selectedRating ? state.ratingSelectedColor : state.ratingUnselectedColor,
                 color: i <= selectedRating ? '#fff' : '#888',
                 fontSize: state.fontSize - 2,
                 fontWeight: state.fontWeight,
@@ -65,7 +59,6 @@ function FeedbackScreen() {
         </div>
       )}
 
-      {/* options */}
       {state.options.length > 0 && (
         <div className="mb-3">
           {state.options.map((opt, i) => (
@@ -86,7 +79,6 @@ function FeedbackScreen() {
         </div>
       )}
 
-      {/* comment box */}
       {state.showComment && (
         <textarea
           value={comment}

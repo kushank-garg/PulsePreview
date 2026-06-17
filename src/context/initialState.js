@@ -24,6 +24,7 @@ const initialState = {
   btnHeight: 40,
   ratingSelectedColor: '#f59e0b',
   ratingUnselectedColor: '#d1d5db',
+  glassEffect: false,
 }
 
 export default initialState

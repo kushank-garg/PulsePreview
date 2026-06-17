@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useCSAT } from '../../context/CSATContext'
 import InitialScreen from './InitialScreen'
 import FeedbackScreen from './FeedbackScreen'
 import ThankYouScreen from './ThankYouScreen'
@@ -7,6 +8,7 @@ const screens = ['Initial', 'Feedback', 'Thank You']
 
 function MobilePreview() {
   const [activeScreen, setActiveScreen] = useState('Initial')
+  const { state } = useCSAT()
 
   function renderScreen() {
     if (activeScreen === 'Initial') return <InitialScreen />
@@ -38,10 +40,24 @@ function MobilePreview() {
             <span className="text-white text-xs">9:41</span>
             <span className="text-white text-xs">●●●</span>
           </div>
-          <div className="flex-1 bg-gray-200 relative flex items-end">
-            <p className="absolute top-3 left-3 text-xs text-gray-400">App content</p>
-            <div className="absolute inset-0 bg-black bg-opacity-30" />
-            <div className="relative w-full rounded-t-3xl overflow-hidden shadow-lg">
+          <div className="flex-1 relative flex items-end overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-200 via-pink-200 to-yellow-100">
+              <div className="absolute top-6 left-6 w-16 h-16 bg-indigo-400 rounded-full opacity-60" />
+              <div className="absolute top-20 right-8 w-10 h-10 bg-pink-400 rounded-lg opacity-60" />
+              <div className="absolute bottom-40 left-10 w-12 h-12 bg-yellow-400 rounded-full opacity-50" />
+              <p className="absolute top-3 left-3 text-xs text-gray-600 font-medium">App content</p>
+            </div>
+            <div className="absolute inset-0 bg-black bg-opacity-10" />
+            <div
+              className={`relative w-full rounded-t-3xl overflow-hidden shadow-lg ${
+                state.glassEffect ? 'backdrop-blur-md' : ''
+              }`}
+              style={
+                state.glassEffect
+                  ? { backgroundColor: `${state.bgColor}b3` }
+                  : {}
+              }
+            >
               {renderScreen()}
             </div>
           </div>

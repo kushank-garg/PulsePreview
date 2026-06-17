@@ -4,10 +4,9 @@ function ThankYouScreen() {
   const { state } = useCSAT()
 
   return (
-    <div className="p-5 text-center" style={{ backgroundColor: state.bgColor }}>
+    <div className="p-5 text-center" style={{ backgroundColor: state.glassEffect ? 'transparent' : state.bgColor }}>
       <div className="w-10 h-1 bg-gray-300 rounded-full mx-auto mb-4" />
 
-      {/* media */}
       {state.tyMedia && !state.tyMedia.includes('application/json') ? (
         <img
           src={state.tyMedia}

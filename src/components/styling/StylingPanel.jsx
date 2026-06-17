@@ -2,6 +2,7 @@ import { useCSAT } from '../../context/CSATContext'
 import ColorField from '../ui/ColorField'
 import SliderField from '../ui/SliderField'
 import SectionLabel from '../ui/SectionLabel'
+import Toggle from '../ui/Toggle'
 
 function StylingPanel() {
   const { state, dispatch } = useCSAT()
@@ -40,6 +41,12 @@ function StylingPanel() {
         onChange={val => update('btnTextColor', val)}
       />
 
+      <Toggle
+        label="Glass effect on popup"
+        checked={state.glassEffect}
+        onChange={val => update('glassEffect', val)}
+      />
+
       <SectionLabel text="Rating Colors" />
 
       <ColorField
@@ -64,7 +71,6 @@ function StylingPanel() {
         unit="px"
       />
 
-      {/* font weight select */}
       <div className="mb-4">
         <label className="block text-xs font-medium text-gray-500 mb-1">
           Font weight
@@ -92,7 +98,6 @@ function StylingPanel() {
         unit="px"
       />
 
-      {/* button width and height side by side */}
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div>
           <label className="block text-xs font-medium text-gray-500 mb-1">

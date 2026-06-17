@@ -4,8 +4,7 @@ function InitialScreen() {
   const { state } = useCSAT()
 
   return (
-    <div className="p-5" style={{ backgroundColor: state.bgColor }}>
-      {/* drag handle */}
+    <div className="p-5" style={{ backgroundColor: state.glassEffect ? 'transparent' : state.bgColor }}>
       <div className="w-10 h-1 bg-gray-300 rounded-full mx-auto mb-4" />
 
       <p
